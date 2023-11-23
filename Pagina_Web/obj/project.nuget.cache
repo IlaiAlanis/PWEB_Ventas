@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cNoEhr7E5LddvkWf0U5XRXz9Od6YMdH8S0uIYIbsiHrNdq+QWwGlFWOZtKnrLe1bmwnQ3vmo7hx0znc65CZdLQ==",
+  "dgSpecHash": "arIQCyXIr8U+QON10hAyvp+E1Wyjm4qJ2fn/8FYyuGgVcYa8Yeu7jC7TcK7jlY0ibkDYf4Fsghd6Xg0xdK0VaA==",
   "success": true,
-  "projectFilePath": "D:\\alani\\FIME\\7mo semestre\\Lab de Progweb\\PIA\\Pagina_Web\\Pagina_Web\\Pagina_Web.csproj",
+  "projectFilePath": "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\Pagina_Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gris\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Gris\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.25\\microsoft.aspnetcore.cryptography.internal.6.0.25.nupkg.sha512",

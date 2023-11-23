@@ -2460,11 +2460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\alani\\FIME\\7mo semestre\\Lab de Progweb\\PIA\\Pagina_Web\\Pagina_Web\\Pagina_Web.csproj",
+      "projectUniqueName": "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\Pagina_Web.csproj",
       "projectName": "Pagina_Web",
-      "projectPath": "D:\\alani\\FIME\\7mo semestre\\Lab de Progweb\\PIA\\Pagina_Web\\Pagina_Web\\Pagina_Web.csproj",
+      "projectPath": "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\Pagina_Web.csproj",
       "packagesPath": "C:\\Users\\Gris\\.nuget\\packages\\",
-      "outputPath": "D:\\alani\\FIME\\7mo semestre\\Lab de Progweb\\PIA\\Pagina_Web\\Pagina_Web\\obj\\",
+      "outputPath": "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

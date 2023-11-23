@@ -2,7 +2,156 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<!--<div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>-->
+
+
+<div class="container mt-5">
+    <h1 class="mt-4 p-3 text-center m-3">Ofertas</h1>
+    <!-- Carrusel -->
+    <div id="carouselExampleInterval" class="carousel carousel-dark slide"  data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="~/images/ej1.jpg" class="d-block justify-content-center mx-auto" style="height: 40vh;" alt="...">
+            </div>
+            <div class="carousel-item"  data-bs-interval="5000">
+                <img src="~/images/ej2.jpg" class="d-block justify-content-center mx-auto" style="height: 40vh;" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="~/images/ej3.jpg" class="d-block justify-content-center mx-auto" style="height: 40vh;" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden-focusable">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden-focusable">Next</span>
+        </button>
+    </div>
+
+    <!-- Título -->
+    <h2 class="mt-4 p-3">Ofertas</h2>
+
+    <!-- Tarjetas -->
+    <div class="row mt-4  ">
+        <div class="col-md-4 position-relative">
+            <div class="position-absolute top-0 start-0 p-3 align-content-center" style="z-index: 1;">
+                <!-- Contenido adicional aquí -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger align-content-center" style=" font-size:18px; width: 210%; height:110%; padding-top:30%;">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+
+            </div>
+            <div id="carouselExampleInterval1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                
+                <div class="carousel-inner">
+                    
+                        <div class="carousel-item active">
+                            <img src="~/images/ej1.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/ej2.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/ej3.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden-focusable">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden-focusable">Next</span>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Tarjeta 1</h5>
+                    <p class="card-text">Contenido de la tarjeta 1.</p>
+                </div>
+            </div>
+
+        <div class="col-md-4 position-relative">
+            <div class="position-absolute top-0 start-0 p-3 align-content-center" style="z-index: 1; ">
+                <!-- Contenido adicional aquí -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger align-content-center" style="font-size:18px; width: 210%; height:110%; padding-top:30%;">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+
+            </div>
+            <div id="carouselExampleInterval1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="~/images/ej1.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/ej2.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/ej3.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden-focusable">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden-focusable">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Tarjeta 1</h5>
+                <p class="card-text">Contenido de la tarjeta 1.</p>
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <div class="position-absolute top-0 start-0 p-3 align-content-center" style="z-index: 1; ">
+                <!-- Contenido adicional aquí -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger align-content-center" style="font-size:18px; width: 210%; height:110%; padding-top:30%;">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+
+            </div>
+            <div id="carouselExampleInterval1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="~/images/ej1.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/ej2.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/ej3.jpg" class="d-block justify-content-center mx-auto" style="height: 25vh;" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden-focusable">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden-focusable">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Tarjeta 1</h5>
+                <p class="card-text">Contenido de la tarjeta 1.</p>
+            </div>
+        </div>
+
+    </div>
+        <!-- Agrega más tarjetas  -->
+    </div>
 </div>
