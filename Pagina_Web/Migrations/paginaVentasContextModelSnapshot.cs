@@ -10,7 +10,7 @@ using Pagina_Web.Models.dbModels;
 
 namespace Pagina_Web.Migrations
 {
-    [DbContext(typeof(paginaVentasContext))]
+    [DbContext(typeof(paginaVentasContextDTO))]
     partial class paginaVentasContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

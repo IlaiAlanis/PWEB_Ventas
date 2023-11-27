@@ -14,12 +14,12 @@ namespace Pagina_Web.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUserDTO> _userManager;
+        private readonly SignInManager<ApplicationUserDTO> _signInManager;
 
         public SetPasswordModel(
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager)
+            UserManager<ApplicationUserDTO> userManager,
+            SignInManager<ApplicationUserDTO> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

@@ -9,6 +9,11 @@ namespace Pagina_Web.Models.dbModels
     [Table("Marca_Producto")]
     public partial class MarcaProducto
     {
+        public MarcaProducto()
+        {
+            Productos = new HashSet<Producto>();
+        }
+
         [Key]
         [Column("id_marca")]
         public int IdMarca { get; set; }
@@ -20,5 +25,7 @@ namespace Pagina_Web.Models.dbModels
         [StringLength(255)]
         [Unicode(false)]
         public string DescripcionMar { get; set; } = null!;
+        public virtual ICollection<Producto> Productos { get; set; }
+
     }
 }

@@ -20,11 +20,11 @@ namespace Pagina_Web.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUserDTO> _signInManager;
+        private readonly UserManager<ApplicationUserDTO> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager,ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<ApplicationUserDTO> signInManager, UserManager<ApplicationUserDTO> userManager,ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _userManager = userManager;

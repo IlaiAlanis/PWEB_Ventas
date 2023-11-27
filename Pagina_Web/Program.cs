@@ -6,13 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<paginaVentasContext>(options =>
+builder.Services.AddDbContext<paginaVentasContextDTO>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<paginaVentasContext>()
+builder.Services.AddIdentity<ApplicationUserDTO, IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<paginaVentasContextDTO>()
     .AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();

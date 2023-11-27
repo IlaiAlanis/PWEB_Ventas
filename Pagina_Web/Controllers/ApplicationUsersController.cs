@@ -13,9 +13,9 @@ namespace Pagina_Web.Controllers
     [Authorize(Roles = "Admin")]
     public class ApplicationUsersController : Controller
     {
-        private readonly paginaVentasContext _context;
+        private readonly paginaVentasContextDTO _context;
 
-        public ApplicationUsersController(paginaVentasContext context)
+        public ApplicationUsersController(paginaVentasContextDTO context)
         {
             _context = context;
         }
@@ -57,7 +57,7 @@ namespace Pagina_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("NombreUsuario,ApellidoUsuario,UserfechaNacUsuario,Id,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount")] ApplicationUser applicationUser)
+        public async Task<IActionResult> Create([Bind("NombreUsuario,ApellidoUsuario,UserfechaNacUsuario,Id,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount")] ApplicationUserDTO applicationUser)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace Pagina_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("NombreUsuario,ApellidoUsuario,UserfechaNacUsuario,Id,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount")] ApplicationUser applicationUser)
+        public async Task<IActionResult> Edit(int id, [Bind("NombreUsuario,ApellidoUsuario,UserfechaNacUsuario,Id,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount")] ApplicationUserDTO applicationUser)
         {
             if (id != applicationUser.Id)
             {

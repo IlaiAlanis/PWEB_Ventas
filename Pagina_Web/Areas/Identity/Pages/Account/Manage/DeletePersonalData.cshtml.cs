@@ -15,13 +15,13 @@ namespace Pagina_Web.Areas.Identity.Pages.Account.Manage
 {
     public class DeletePersonalDataModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUserDTO> _userManager;
+        private readonly SignInManager<ApplicationUserDTO> _signInManager;
         private readonly ILogger<DeletePersonalDataModel> _logger;
 
         public DeletePersonalDataModel(
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
+            UserManager<ApplicationUserDTO> userManager,
+            SignInManager<ApplicationUserDTO> signInManager,
             ILogger<DeletePersonalDataModel> logger)
         {
             _userManager = userManager;

@@ -53,7 +53,7 @@ namespace Pagina_Web.Models.dbModels
         public virtual Cargo IdCargoNavigation { get; set; } = null!;*/
         [ForeignKey("IdDir")]
         [InverseProperty("Usuarios")]
-        public virtual Direccion IdDirNavigation { get; set; } = null!;
+        public virtual DireccionDTO IdDirNavigation { get; set; } = null!;
         [InverseProperty("IdUsuarioCarritoNavigation")]
         public virtual ICollection<Carrito> Carritos { get; set; }
         [InverseProperty("IdUsuarioVentaNavigation")]

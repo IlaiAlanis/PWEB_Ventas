@@ -14,13 +14,13 @@ namespace Pagina_Web.Areas.Identity.Pages.Account.Manage
 {
     public class ResetAuthenticatorModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUserDTO> _userManager;
+        private readonly SignInManager<ApplicationUserDTO> _signInManager;
         private readonly ILogger<ResetAuthenticatorModel> _logger;
 
         public ResetAuthenticatorModel(
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
+            UserManager<ApplicationUserDTO> userManager,
+            SignInManager<ApplicationUserDTO> signInManager,
             ILogger<ResetAuthenticatorModel> logger)
         {
             _userManager = userManager;

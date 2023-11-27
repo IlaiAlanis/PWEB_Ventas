@@ -13,9 +13,9 @@ namespace Pagina_Web.Controllers
     [Authorize(Roles = "Admin")]
     public class DetalleVpsController : Controller
     {
-        private readonly paginaVentasContext _context;
+        private readonly paginaVentasContextDTO _context;
 
-        public DetalleVpsController(paginaVentasContext context)
+        public DetalleVpsController(paginaVentasContextDTO context)
         {
             _context = context;
         }
@@ -60,7 +60,7 @@ namespace Pagina_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdVentaDvp,IdProductoDvp,PrecioDvp,CantidadDvp")] DetalleVp detalleVp)
+        public async Task<IActionResult> Create([Bind("IdVentaDvp,IdProductoDvp,PrecioDvp,CantidadDvp")] DetalleVpDTO detalleVp)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace Pagina_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdVentaDvp,IdProductoDvp,PrecioDvp,CantidadDvp")] DetalleVp detalleVp)
+        public async Task<IActionResult> Edit(int id, [Bind("IdVentaDvp,IdProductoDvp,PrecioDvp,CantidadDvp")] DetalleVpDTO detalleVp)
         {
             if (id != detalleVp.IdVentaDvp)
             {

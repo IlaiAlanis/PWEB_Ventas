@@ -20,10 +20,14 @@ namespace Pagina_Web.Models.dbModels
         public int IdProd { get; set; }
         [Column("id_cat_prod")]
         public int IdCatProd { get; set; }
+        [Column("id_marc_prod")]
+        public int IdMarcProd { get; set; }
         [Column("imagen")]
         [StringLength(200)]
         [Unicode(false)]
         public string Imagen { get; set; } = null!;
+        public IFormFile? ImagenArchivo { get; set; }
+
         [Column("sku")]
         [StringLength(100)]
         [Unicode(false)]
@@ -37,16 +41,20 @@ namespace Pagina_Web.Models.dbModels
         [Column("precio_prod", TypeName = "decimal(10, 2)")]
         public decimal PrecioProd { get; set; }
         [Column("descripcion_prod")]
-        [StringLength(1)]
+        [StringLength(100)]
         [Unicode(false)]
         public string DescripcionProd { get; set; } = null!;
 
         [ForeignKey("IdCatProd")]
         [InverseProperty("Productos")]
         public virtual CategoriaProducto IdCatProdNavigation { get; set; } = null!;
+        [ForeignKey("IdMarcProd")]
+        [InverseProperty("Productos")]
+        public virtual MarcaProducto IdMarcProdNavigation { get; set; } = null!;
         [InverseProperty("IdProdCarritoNavigation")]
         public virtual ICollection<Carrito> Carritos { get; set; }
         [InverseProperty("IdProductoDvpNavigation")]
         public virtual ICollection<DetalleVp> DetalleVps { get; set; }
+
     }
 }

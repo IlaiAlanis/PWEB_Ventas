@@ -13,9 +13,9 @@ namespace Pagina_Web.Controllers
     [Authorize(Roles = "Admin")]
     public class MarcaProductoesController : Controller
     {
-        private readonly paginaVentasContext _context;
+        private readonly paginaVentasContextDTO _context;
 
-        public MarcaProductoesController(paginaVentasContext context)
+        public MarcaProductoesController(paginaVentasContextDTO context)
         {
             _context = context;
         }
@@ -57,7 +57,7 @@ namespace Pagina_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdMarca,NombreMar,DescripcionMar")] MarcaProducto marcaProducto)
+        public async Task<IActionResult> Create([Bind("IdMarca,NombreMar,DescripcionMar")] MarcaProductoDTO marcaProducto)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace Pagina_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdMarca,NombreMar,DescripcionMar")] MarcaProducto marcaProducto)
+        public async Task<IActionResult> Edit(int id, [Bind("IdMarca,NombreMar,DescripcionMar")] MarcaProductoDTO marcaProducto)
         {
             if (id != marcaProducto.IdMarca)
             {

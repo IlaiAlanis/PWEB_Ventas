@@ -24,17 +24,17 @@ namespace Pagina_Web.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IUserStore<ApplicationUser> _userStore;
-        private readonly IUserEmailStore<ApplicationUser> _emailStore;
+        private readonly SignInManager<ApplicationUserDTO> _signInManager;
+        private readonly UserManager<ApplicationUserDTO> _userManager;
+        private readonly IUserStore<ApplicationUserDTO> _userStore;
+        private readonly IUserEmailStore<ApplicationUserDTO> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         /*private readonly IEmailSender _emailSender;*/
 
         public RegisterModel(
-            UserManager<ApplicationUser> userManager,
-            IUserStore<ApplicationUser> userStore,
-            SignInManager<ApplicationUser> signInManager,
+            UserManager<ApplicationUserDTO> userManager,
+            IUserStore<ApplicationUserDTO> userStore,
+            SignInManager<ApplicationUserDTO> signInManager,
             ILogger<RegisterModel> logger)
             /*IEmailSender emailSender*/
         {
@@ -183,27 +183,27 @@ namespace Pagina_Web.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private ApplicationUser CreateUser()
+        private ApplicationUserDTO CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<ApplicationUser>();
+                return Activator.CreateInstance<ApplicationUserDTO>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
-                    $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUserDTO)}'. " +
+                    $"Ensure that '{nameof(ApplicationUserDTO)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<ApplicationUser> GetEmailStore()
+        private IUserEmailStore<ApplicationUserDTO> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<ApplicationUser>)_userStore;
+            return (IUserEmailStore<ApplicationUserDTO>)_userStore;
         }
     }
 }

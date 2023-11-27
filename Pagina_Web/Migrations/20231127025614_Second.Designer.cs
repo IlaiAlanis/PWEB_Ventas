@@ -11,7 +11,7 @@ using Pagina_Web.Models.dbModels;
 
 namespace Pagina_Web.Migrations
 {
-    [DbContext(typeof(paginaVentasContext))]
+    [DbContext(typeof(paginaVentasContextDTO))]
     [Migration("20231127025614_Second")]
     partial class Second
     {
