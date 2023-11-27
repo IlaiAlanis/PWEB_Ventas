@@ -23,6 +23,6 @@ namespace Pagina_Web.Models.dbModels
         public virtual Producto IdProdCarritoNavigation { get; set; } = null!;
         [ForeignKey("IdUsuarioCarrito")]
         [InverseProperty("Carritos")]
-        public virtual Pago IdUsuarioCarritoNavigation { get; set; } = null!;
+        public virtual ApplicationUser IdUsuarioCarritoNavigation { get; set; } = null!;
     }
 }

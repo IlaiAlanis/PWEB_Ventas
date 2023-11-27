@@ -13,7 +13,6 @@ namespace Pagina_Web.Models.dbModels
         {
             Direccions = new HashSet<Direccion>();
             Municipios = new HashSet<Municipio>();
-            Productos = new HashSet<Producto>();
         }
 
         [Key]
@@ -28,7 +27,5 @@ namespace Pagina_Web.Models.dbModels
         public virtual ICollection<Direccion> Direccions { get; set; }
         [InverseProperty("IdEstadoNavigation")]
         public virtual ICollection<Municipio> Municipios { get; set; }
-        [InverseProperty("EstadoProdNavigation")]
-        public virtual ICollection<Producto> Productos { get; set; }
     }
 }

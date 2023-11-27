@@ -10,7 +10,6 @@ namespace Pagina_Web.Models.dbModels
     {
         public Pago()
         {
-            Carritos = new HashSet<Carrito>();
             Venta = new HashSet<Ventum>();
         }
 
@@ -26,8 +25,6 @@ namespace Pagina_Web.Models.dbModels
         [Unicode(false)]
         public string? DescripcionPagos { get; set; }
 
-        [InverseProperty("IdUsuarioCarritoNavigation")]
-        public virtual ICollection<Carrito> Carritos { get; set; }
         [InverseProperty("IdPagosNavigation")]
         public virtual ICollection<Ventum> Venta { get; set; }
     }

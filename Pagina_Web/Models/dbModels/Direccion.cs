@@ -11,7 +11,7 @@ namespace Pagina_Web.Models.dbModels
     {
         public Direccion()
         {
-            Usuarios = new HashSet<Usuario>();
+            Usuarios = new HashSet<ApplicationUser>();
         }
 
         [Key]
@@ -33,6 +33,6 @@ namespace Pagina_Web.Models.dbModels
         [InverseProperty("Direccions")]
         public virtual Municipio IdMunUsuarioNavigation { get; set; } = null!;
         [InverseProperty("IdDirNavigation")]
-        public virtual ICollection<Usuario> Usuarios { get; set; }
+        public virtual ICollection<ApplicationUser> Usuarios { get; set; }
     }
 }

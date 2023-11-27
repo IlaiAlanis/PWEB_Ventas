@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\Pagina_Web.csproj": {}
+    "C:\\Users\\Gris\\Downloads\\PWEB_PIA\\PWEB_Ventas\\Pagina_Web\\Pagina_Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\Pagina_Web.csproj": {
+    "C:\\Users\\Gris\\Downloads\\PWEB_PIA\\PWEB_Ventas\\Pagina_Web\\Pagina_Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\Pagina_Web.csproj",
+        "projectUniqueName": "C:\\Users\\Gris\\Downloads\\PWEB_PIA\\PWEB_Ventas\\Pagina_Web\\Pagina_Web.csproj",
         "projectName": "Pagina_Web",
-        "projectPath": "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\Pagina_Web.csproj",
+        "projectPath": "C:\\Users\\Gris\\Downloads\\PWEB_PIA\\PWEB_Ventas\\Pagina_Web\\Pagina_Web.csproj",
         "packagesPath": "C:\\Users\\Gris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gris\\Downloads\\PWEB_Ventas-main\\Pagina_Web\\obj\\",
+        "outputPath": "C:\\Users\\Gris\\Downloads\\PWEB_PIA\\PWEB_Ventas\\Pagina_Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -64,6 +64,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[6.0.25, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [

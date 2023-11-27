@@ -20,6 +20,14 @@ namespace Pagina_Web.Models.dbModels
         public int IdProd { get; set; }
         [Column("id_cat_prod")]
         public int IdCatProd { get; set; }
+        [Column("imagen")]
+        [StringLength(200)]
+        [Unicode(false)]
+        public string Imagen { get; set; } = null!;
+        [Column("sku")]
+        [StringLength(100)]
+        [Unicode(false)]
+        public string Sku { get; set; } = null!;
         [Column("costo_prod", TypeName = "decimal(10, 2)")]
         public decimal CostoProd { get; set; }
         [Column("existencia_prod", TypeName = "decimal(10, 2)")]
@@ -28,16 +36,11 @@ namespace Pagina_Web.Models.dbModels
         public int DescuentoProd { get; set; }
         [Column("precio_prod", TypeName = "decimal(10, 2)")]
         public decimal PrecioProd { get; set; }
-        [Column("estado_prod")]
-        public int EstadoProd { get; set; }
         [Column("descripcion_prod")]
         [StringLength(1)]
         [Unicode(false)]
         public string DescripcionProd { get; set; } = null!;
 
-        [ForeignKey("EstadoProd")]
-        [InverseProperty("Productos")]
-        public virtual Estado EstadoProdNavigation { get; set; } = null!;
         [ForeignKey("IdCatProd")]
         [InverseProperty("Productos")]
         public virtual CategoriaProducto IdCatProdNavigation { get; set; } = null!;
